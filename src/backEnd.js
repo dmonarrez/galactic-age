@@ -25,6 +25,11 @@ export class GalacticAge {
     return mercuryAge.toFixed(1);
   }
 
+  ageOnMars (userAge) {
+    const mercuryAge = userAge / 1.88;
+    return mercuryAge.toFixed(1);
+  }
+
 
 
 
