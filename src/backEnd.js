@@ -10,9 +10,8 @@ export class GalacticAge {
     this.femaleExpectancy = new Date(41, 00);
   }
 
-  todaysDate () {
-    const d = new Date();
-    console.log(d);
+  todaysDate (userAge) {
+    return userAge;
   }
 
 }
