@@ -1,12 +1,38 @@
 //Haiku constructor
 export class GalacticAge {
-  constructor (year, month) {
-    this.year = year;
+  constructor (year, gender) {
+    this.year = Number(year);
+    this.gender = gender;
+
+    this.userBirthYear = new Date(this.year, 00);
+    this.maleExpecancy = new Date(43, 00);
+    this.femaleExpecancy = new Date(41, 00);
+    this.today = new Date();
   }
-  // findWords(line) {
-  //   const wordsArr = [];
-  //   wordsArr.push(line.split(' '));
-  //   return wordsArr
+
+  getUserAge(birthYear) {
+    const age = this.today.getFullYear() - birthYear.getFullYear();
+    return age;
+  }
+
+  // ageOnMercury (userAge) {
+  //
   // }
+
+
+
+
+
+
+
+
+
+
+
+
+  test(line) {
+    console.log(line);
+    return line
+  }
 
 }
