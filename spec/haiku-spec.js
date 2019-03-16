@@ -30,4 +30,10 @@ describe('GalacticAge', function() {
     const userAge = user.getUserAge();
     expect(user.ageOnMars(userAge)).toEqual('11.7');
   });
+
+  it('should calculate a users age on Venus', function () {
+    const user = new GalacticAge('1997', 'M');
+    const userAge = user.getUserAge();
+    expect(user.ageOnJupiter(userAge)).toEqual('1.9');
+  });
 });

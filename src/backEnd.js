@@ -21,13 +21,18 @@ export class GalacticAge {
   }
 
   ageOnVenus (userAge) {
-    const mercuryAge = userAge / .62;
-    return mercuryAge.toFixed(1);
+    const venusAge = userAge / .62;
+    return venusAge.toFixed(1);
   }
 
   ageOnMars (userAge) {
-    const mercuryAge = userAge / 1.88;
-    return mercuryAge.toFixed(1);
+    const marsAge = userAge / 1.88;
+    return marsAge.toFixed(1);
+  }
+
+  ageOnJupiter (userAge) {
+    const jupiterAge = userAge / 11.86;
+    return jupiterAge.toFixed(1);
   }
 
 
