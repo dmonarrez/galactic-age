@@ -35,6 +35,27 @@ export class GalacticAge {
     return jupiterAge.toFixed(1);
   }
 
+  time (age, gender) {
+    let time = '';
+    let genderAge = '';
+    if (gender === "F") {
+      genderAge  =   this.year - this.femaleExpecancy.getFullYear();
+    } else if (gender === "M") {
+      genderAge = this.year - this.maleExpecancy.getFullYear();
+    }
+
+    if (age <= genderAge) {
+      console.log(age);
+      time = genderAge - age;
+      return "you have an estimated " + time + " years left based on gender average"
+    } else if (age > genderAge) {
+      console.log(age);
+      time = age - genderAge;
+      return "you have lived " + time + " years beyond your gender average"
+    }
+
+  }
+
 
 
 
