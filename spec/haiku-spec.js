@@ -41,7 +41,16 @@ describe('GalacticAge', function() {
     const user = new GalacticAge('1997', 'M');
     const userAge = user.getUserAge();
     const userAgeOnPlanet = user.ageOnJupiter(userAge);
-    const userTime = user.time(userAgeOnPlanet, this.gender);
+    const userTime = user.time(userAgeOnPlanet, user.gender);
     expect(userTime).toEqual("you have an estimated 74.1 years left based on gender average");
   });
+
+  it('should calculate how many years a user has surpassed their gender average age by', function () {
+    const user = new GalacticAge('1997', 'M');
+    const userAge = user.getUserAge();
+    const userAgeOnPlanet = user.ageOnMercury(userAge);
+    const userTime = user.time(userAgeOnPlanet, user.gender);
+    expect(userTime).toEqual('you have surpassed your gender average age by 15.7 years!');
+  });
+
 });

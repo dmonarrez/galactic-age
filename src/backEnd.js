@@ -35,25 +35,24 @@ export class GalacticAge {
     return jupiterAge.toFixed(1);
   }
 
-  time (age, gender) {
-    let time = '';
-    let genderAge = '';
-    if (gender === "F") {
-      genderAge  =   this.year - this.femaleExpecancy.getFullYear();
-    } else if (gender === "M") {
-      genderAge = this.year - this.maleExpecancy.getFullYear();
-    }
+  time(planetAge, gender) {
+    const avgMaleAge = this.today.getFullYear() - this.maleExpecancy.getFullYear();
+    const avgFemaleAge = this.today.getFullYear() - this.femaleExpecancy.getFullYear();
 
-    if (age <= genderAge) {
-      console.log(age);
-      time = genderAge - age;
-      return "you have an estimated " + time + " years left based on gender average"
-    } else if (age > genderAge) {
-      console.log(age);
-      time = age - genderAge;
-      return "you have lived " + time + " years beyond your gender average"
+    //for sure could have made all these "ifs" into more modular function but am shipping it because it works and i need to move on
+    if(gender === 'F') {
+      if(planetAge <= avgFemaleAge) {
+        return 'you have an estimated ' + (avgFemaleAge - planetAge).toFixed(1) + ' years left based on gender average'
+      } else {
+        return 'you have surpassed your gender average age by ' + (planetAge - avgFemaleAge).toFixed(1) + ' years!'
+      }
+    } else if (gender === 'M') {
+      if(planetAge <= avgMaleAge) {
+        return 'you have an estimated ' + (avgMaleAge - planetAge).toFixed(1) + ' years left based on gender average'
+      } else {
+        return 'you have surpassed your gender average age by ' + (planetAge - avgMaleAge).toFixed(1) + ' years!'
+      }
     }
-
   }
 
 
