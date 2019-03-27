@@ -11,7 +11,7 @@ A program that calculates a users age on different planets
 
 ## Description
 
-Use this webpage to search Portland, OR for artists, venues, and keywords like "music", "rap", "sports", "comedy" then you can purchase tickets thru Ticketmaster after clicking on a result.
+Use this webpage to find out how old you are on other planets and how much longer you have left to live or how much longer than average you have lived on a given planet
 
 ## Authors
 
